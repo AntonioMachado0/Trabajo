@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--esto es para que funcione jquery-->
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!--esto es para que funcione mensajes de alerta-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!--quitar si no funciona-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="cssUsuarios.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="htitulo">
+            <input type="button" value="Inicio" class="btn_inicio" id="btn_inicio">
+            <center class="ctitulo"><h2 class="titulo">Usuarios</h2></center>
+        </div>
+        <div class="bfUsuario">
+            <form id="fusuarios">
+                <div class="form-part">
+                    <div class="form-part">
+                        <h2>*Nombre</h2>
+                        <input type="text" id="tnombre" class="tRedondo" autocomplete="nop" required="">
+                        <h2>*Apellido</h2>
+                        <input type="text" id="tapellido" class="tRedondo" autocomplete="nop" required="">
+                    </div>
+                    <div class="form-part">
+                        <h2>*DUI</h2>
+                        <input type="text" id="tdui" class="tRedondo" autocomplete="nop" required="">
+                        <h2>*Telefono</h2>
+                        <input type="text" id="ttelefono" class="tRedondo" autocomplete="nop" required="">
+                    </div>
+                    <div class="form-part">
+                        <h2>*Correo</h2>
+                        <input type="email" id="tcorreo" class="tRedondo" autocomplete="nop" required="">
+                        <h2>*Direccion</h2>
+                        <input type="text" id="tdireccion" class="tRedondo" autocomplete="nop" required="">
+                        <!--<div>
+                            <div class="form-part">
+                                <h2>*Direccion</h2>
+                                <input type="text" id="tdireccion" class="tRedondo" autocomplete="nop" required="">
+                            </div>
+                            <div class="form-part">
+                                <h2>Estado</h2>
+                                <select id="list_estado" class="list_estado">
+                                    <option value="Activo">Activo</option>
+                                    <option value="Inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="form-part">
+                                <h2>Cargo</h2>
+                                <select id="list_cargos" class="list_cargos">
+                                    <option value="temporal">Solo es temporal</option>
+                                </select>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="form-part">
+                        <h2>*Contraseña</h2>
+                        <input type="password" class="tRedondo list_password" id="tpassword" autocomplete="nop" required="">
+                        <div>
+                            <div class="form-part">
+                                <h2>Estado</h2>
+                                <select id="list_estado" class="list_estado">
+                                    <option value="Activo">Activo</option>
+                                    <option value="Inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="form-part">
+                                <h2>Cargo</h2>
+                                <select id="list_cargos" class="list_cargos">
+                                    <option value="temporal">Solo es temporal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-part">
+                    <input type="submit" value="Guardar" id="btn_guardar_actualizar" class="btn_guardar_actualizar btn_form"><br>
+                    <input type="reset" value="Cancelar" id="btn_cancelar" class="btn_cancelar btn_form">
+                </div>
+            </form>
+        </div>
+        <div class="btUsuarios">
+            <input type="button" class="botones-tabla btn_actualizar" value="Actualizar" id="btn_actualizar">
+            <div class="scrollUsuario">
+                <table id="usuarios" class="table table-bordered dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th class="cUsuario">NOMBRE</th>
+                            <th class="cUsuario">APELLIDO</th>
+                            <th class="cUsuario">DUI</th>
+                            <th class="cUsuario">TELEFONO</th>
+                            <th class="cUsuario cCorreo">CORREO</th>
+                            <th class="cUsuario">CLAVE</th>
+                            <th class="cUsuario">DIRECCION</th>
+                            <th class="cUsuario">CARGO</th>
+                            <th class="cUsuario">ESTADO</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="tablaClass.js"></script>
+        <script src="classCargo.js"></script>
+        <script src="classUsuario.js"></script>
+        <script type="text/javascript" src="sUsuario.js"></script>
+    </body>
+</html>

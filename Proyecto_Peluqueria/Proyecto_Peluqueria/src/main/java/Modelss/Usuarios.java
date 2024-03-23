@@ -22,5 +22,7 @@ public class Usuarios {
     private String correo;
     private String direccion;
     private String estado;
+    private int fk_cargo;
+    private String claveusuario;
     private Cargo cargo;
 }
