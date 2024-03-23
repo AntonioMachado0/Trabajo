@@ -1,0 +1,236 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 03-12-2024, 06:38:42 PM
+    Author     : javier
+*/
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+div{
+    margin: 0px;
+    padding: 0px;
+}
+
+.htitulo{
+    background: #05FFCA;
+    display: inline-block;
+    width: 100%;
+}
+
+.titulo{
+    font-size: 25px;
+    margin: 10px;
+}
+
+.btUsuarios{
+    background: linear-gradient(#0735D0, #0078FF);
+    display: inline-block;
+    width: 96%;
+    height: 280px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bfUsuario{
+    background: linear-gradient(#0735D0, #0078FF);
+    display: inline-block;
+    width: 96%;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.scrollUsuario{
+    overflow-y: scroll;
+    width: 97%;
+    height: 70%;
+    margin: 15px;
+    margin-top: 2%;
+    background: white;
+}
+
+.botones-tabla{
+    margin-left: 1%;
+    margin-top: 2%;
+    border-radius: 10px;
+    
+}
+
+.btn_actualizar{
+    background: #00CEA9;
+}
+
+.btn_actualizar:hover{
+    animation-duration: 0.3s;
+    animation-name: bactualizar;
+    background: #00FFD1;
+}
+
+.btn_actualizar:active{
+    background: #006855;
+}
+
+@keyFrames bactualizar{
+    from{
+        background: #00CEA9;
+    }
+    
+    to{
+        background: #00FFD1;
+    }
+}
+
+#usuarios{
+    background: white;
+    width: 100%;
+}
+
+#usuarios thead{
+    background: black;
+    color: white;
+}
+
+.cUsuario{
+    padding-right: 5px; 
+}
+
+.cCorreo{
+    padding-right: 30px;
+}
+
+/*aqui voy a poner el estili del formulario*/
+
+.form-part{
+    float: left;
+    margin-left: 10px;
+}
+
+.form-part-grup{
+    margin-left: 10px;
+}
+
+.btn_form{
+    margin-left: 20%;
+    margin-top: 30%;
+}
+
+.btn_guardar_actualizar{
+    background: #00CEA9;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.btn_guardar_actualizar:hover{
+    animation-duration: 0.3s;
+    animation-name: bGuardarActualizar;
+    background: #00FFD1;
+}
+
+.btn_guardar_actualizar:active{
+    background: #006855;
+}
+
+@keyFrames bGuardarActualizar{
+    from{
+        background: #00CEA9;
+    }
+    
+    to{
+        background: #00FFD1;
+    }
+}
+
+.btn_cancelar{
+    background: #A201B2;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.btn_cancelar:hover{
+    animation-duration: 0.3s;
+    animation-name: bCancelar;
+    background: #E600FD;
+}
+
+.btn_cancelar:active{
+    background: #70007B;
+}
+
+@keyFrames bCancelar{
+    from{
+        background: #A201B2;
+    }
+    to{
+        background: #E600FD;
+    }
+}
+
+.tRedondo{
+    border-radius: 10px;
+}
+
+.list_password{
+    width: 100%;
+}
+
+.center{
+    float: left;
+}
+
+.list_estado{
+    width: 80px;
+}
+
+.list_cargos{
+    width: 150px;
+}
+
+.tabla-select{
+    background: #00B3D3;
+}
+
+.btn_inicio{
+    float: left;
+    width: 10%;
+    margin-top: 1%;
+    margin-left: 2%;
+    border-radius: 10px;
+    background: #00CC69;
+    position: absolute;
+    z-index: 1;
+}
+
+.btn_inicio:hover{
+    animation-duration: 0.3s;
+    animation-name: binicio;
+    background: #00FF83;
+}
+
+.btn_inicio:active{
+    background: #008B48;
+}
+
+@keyFrames binicio{
+    from{
+        background: #00CC69;
+    }
+    
+    to{
+        background: #00FF83;
+    }
+}
