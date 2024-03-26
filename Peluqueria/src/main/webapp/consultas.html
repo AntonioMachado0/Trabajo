@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Consultas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la Página de Consultas</h1>
+
+    <button onclick="irACortes()">Cortes con precios menor a $15</button>
+    <button onclick="irAReservas()">Reservasiones </button>
+    <button onclick="irAClientes()">Clientes con confirmacion de corte de pelo</button>
+    <button onclick="irAUsuarios()">Cargos de usuarios</button>
+    <button onclick="irAHistorial()">Historial de reservaciones</button>
+    <button onclick="irANumero()">Numero de cortes</button>
+
+    <script>
+        function irACortes() {
+            window.location.href = "corte.jsp";
+        }
+
+        function irAReservas() {
+            window.location.href = 'reservasConsul.jsp';
+        }
+
+        function irAClientes() {
+            window.location.href = 'reserva.jsp';
+        }
+        
+        function irAUsuarios() {
+            window.location.href = 'Usuariosconsul.jsp';
+        }
+        
+        function irAHistorial() {
+            window.location.href = 'ConsultaHistorialReservacion.jsp';
+        }
+        
+        function irANumero() {
+            window.location.href = 'Consulta_NumReservas_Cortes.jsp';
+        }
+    </script>
+</body>
+</html>

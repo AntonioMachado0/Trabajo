@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Peluqueria</title>
+    <style>
+        /* Estilos para el menú */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: -300px; /* Inicialmente oculto */
+            width: 300px;
+            height: 100%;
+            background-color: #5b795c; /* Color de fondo verde */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: left 0.3s; /* Transición suave al desplegar */
+            z-index: 1000;
+            padding-top: 50px; /* Espacio para el botón */
+        }
+        .menu {
+            padding: 20px;
+        }
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #fff; /* Texto blanco */
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #45a049; /* Fondo más oscuro al pasar el ratón */
+        }
+        
+        /* Estilos para el botón de menú */
+        .menu-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1001; /* Por encima del menú */
+            background-color: #5b795c; /* Color de fondo verde */
+            color: #fff; /* Texto blanco */
+            font-size: 24px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu-btn:hover {
+            background-color: #45a049; /* Color de fondo más oscuro al pasar el ratón */
+        }
+        
+        /* Estilos para mostrar el menú */
+        .menu-container.active {
+            left: 0; /* Mostrar el menú */
+        }
+    </style>
+</head>
+<body>
+
+<button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+
+<div class="menu-container" id="menu">
+    <div class="menu">
+        <a href="Registro.jsp">Registrarse</a>
+        <a href="Iniciar_sesion.jsp">Iniciar Sesión</a>
+        <a href="consultas.html">Consultas</a>
+    </div>
+</div>
+
+<!-- Contenido de la página aquí -->
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
