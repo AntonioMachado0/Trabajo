@@ -40,8 +40,12 @@
     <button onclick="irAUsuarios()">Cargos de usuarios</button>
     <button onclick="irAHistorial()">Historial de reservaciones</button>
     <button onclick="irANumero()">Numero de cortes</button>
+    <button onclick="irAAdministracionUsuarios()">Administracion de Usuarios</button>
 
     <script>
+        function irAAdministracionUsuarios(){
+            window.location.href = './UserManager/Usuarios.html';
+        }
         function irACortes() {
             window.location.href = "corte.jsp";
         }
