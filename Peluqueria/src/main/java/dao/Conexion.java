@@ -6,58 +6,61 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  *
  * @author guill
  */
 public class Conexion {
-    private static Connection conexion = null;
-    private static final ResultSet rs = null;
-    private static Statement sentencia = null;
-    private static PreparedStatement ps = null;
-    private static final String url = "jdbc:postgresql://localhost:5432/peluqueria1";
-    private static final String usuario = "postgres";
-    private static final String password = "root";
+    private Connection conexion = null;
+    //private ResultSet rs = null;
+    //private Statement sentencia = null;
+    //private PreparedStatement ps = null;
+    private String database = "peluqueria";
+    private String port = "5432";
+    private String parcialUrl = "localhost";
+    private String url = "jdbc:postgresql://"+parcialUrl+":"+port+"/"+database;
+    private String usuario = "postgres";
+    private String password = "admin";
 
     public Connection getConexion() {
-        Connection con = null;
         try {
             Class.forName("org.postgresql.Driver").newInstance();
-            con = DriverManager.getConnection(url, usuario, password);
-            System.out.println("conectando a la BD");
-        } catch (SQLException ex) {
+            this.conexion = DriverManager.getConnection(url, usuario, password);
+            //System.out.println("conectando a la BD");
         } catch (Exception e) {
 
         }
-        return con;
+        return this.conexion;
     }
 
-    public static void cerrarConexiones() {
-        if (sentencia != null) {
-            try {
-                sentencia.close();
-            } catch (SQLException e) {
-                System.out.println("Error al cerrar el Statement" + e);
-            }
+    public void cerrarConexiones() {
+        try{
+            this.conexion.close();
+        }catch(Exception e){
+            e.printStackTrace();
         }
-        if (conexion != null) {
-            try {
-                conexion.close();
-            } catch (SQLException e) {
-                System.out.println("Error al cerrar la conexion a la BD" + e);
-            }
-        }
-        if (rs != null) {
-            try {
-                rs.close();
-            } catch (SQLException e) {
-                System.out.println("Error al cerrar la conexion a la BD" + e);
-            }
-        }
+        //sigo creyendo que esto es esta desordenado asi que lo comente y recontrui el codigo
+//        if (sentencia != null) {
+//            try {
+//                sentencia.close();
+//            } catch (SQLException e) {
+//                System.out.println("Error al cerrar el Statement" + e);
+//            }
+//        }
+//        if (conexion != null) {
+//            try {
+//                conexion.close();
+//            } catch (SQLException e) {
+//                System.out.println("Error al cerrar la conexion a la BD" + e);
+//            }
+//        }
+//        if (rs != null) {
+//            try {
+//                rs.close();
+//            } catch (SQLException e) {
+//                System.out.println("Error al cerrar la conexion a la BD" + e);
+//            }
+//        }
     }
 }

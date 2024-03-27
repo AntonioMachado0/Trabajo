@@ -18,6 +18,8 @@ public class Usuarios {
     private String correo;
     private String direccion;
     private String estado;
+    private int fk_cargo;
+    private String claveusuario;
     private Cargo cargo;
 
     public Usuarios() {
@@ -35,6 +37,24 @@ public class Usuarios {
         this.direccion = direccion;
         this.estado = estado;
     }
+
+    public int getFk_cargo() {
+        return fk_cargo;
+    }
+
+    public void setFk_cargo(int fk_cargo) {
+        this.fk_cargo = fk_cargo;
+    }
+
+    public String getClaveusuario() {
+        return claveusuario;
+    }
+
+    public void setClaveusuario(String claveusuario) {
+        this.claveusuario = claveusuario;
+    }
+    
+    
 
     public int getIdusuario() {
         return idusuario;
